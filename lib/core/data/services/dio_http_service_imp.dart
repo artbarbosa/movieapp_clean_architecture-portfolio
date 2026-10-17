@@ -7,7 +7,7 @@ class DioHttpServiceImp implements HttpService {
     _dio = Dio(BaseOptions(baseUrl: 'https://api.themoviedb.org/4/', headers: {
       'content-type': 'application/json;charset=utf-8',
       'authorization':
-          'Bearer PORTFOLIO_REMOVED_API_TOKEN',
+          'Bearer ${const String.fromEnvironment("TMDB_READ_ACCESS_TOKEN")}',
     }));
   }
 
